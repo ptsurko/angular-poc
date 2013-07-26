@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Content/main.css" />
+    <script src="Scripts/angular.js"></script>
+    <!--Remove-->
+    <script src="Scripts/underscore.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/Controllers/TestController.js"></script>
+    <script src="App/Modules/Dialog/DialogProvider.js"></script>
+    <script src="App/Modules/Modal/ConfirmPopup.js"></script>
+</head>
+<body data-ng-app="TestApp" data-ng-controller="TestController">
+    <button data-ng-click="togglePopup();">Open popup</button>
+    <confirm-popup is-popup-opened="popup" options="confirmOptions"></confirm-popup>
+    
+    <button data-ng-click="togglePopup2();">Open popup</button>
+    <confirm-popup is-popup-opened="popup2" options="confirmOptions"></confirm-popup>
+</body>
+</html>

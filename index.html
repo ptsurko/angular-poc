@@ -2,20 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
-    <link rel="stylesheet" href="Content/main.css" />
-    <script src="Scripts/angular.js"></script>
-    <!--Remove-->
-    <script src="Scripts/underscore.js"></script>
-    <script src="App/app.js"></script>
-    <script src="App/Controllers/TestController.js"></script>
-    <script src="App/Modules/Dialog/DialogProvider.js"></script>
-    <script src="App/Modules/Modal/ConfirmPopup.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="js/modules/loadingindicator/styles.css" />
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/TestController.js"></script>
+    <script src="js/controllers/LoadingIndicatorController.js"></script>
+
+
+
+    <script src="js/modules/dialog/DialogProvider.js"></script>
+    <script src="js/modules/modal/ConfirmPopup.js"></script>
+    <script src="js/modules/loadingindicator/directives.js"></script>
 </head>
-<body data-ng-app="TestApp" data-ng-controller="TestController">
-    <button data-ng-click="togglePopup();">Open popup</button>
-    <confirm-popup is-popup-opened="popup" options="confirmOptions"></confirm-popup>
-    
-    <button data-ng-click="togglePopup2();">Open popup</button>
-    <confirm-popup is-popup-opened="popup2" options="confirmOptions"></confirm-popup>
+<body data-ng-app="poc" data-ng-controller="LoadingIndicatorController">
+    <div data-ng-controller="TestController">
+        <button data-ng-click="togglePopup();">Open popup</button>
+        <confirm-popup is-popup-opened="popup" options="confirmOptions"></confirm-popup>
+
+        <button data-ng-click="togglePopup2();">Open popup</button>
+        <confirm-popup is-popup-opened="popup2" options="confirmOptions"></confirm-popup>
+    </div>
+
+        <div class="box" data-loading-indicator="loading"></div>
+        <button data-ng-click="loading = !loading;">Toggle loading</button>
 </body>
 </html>

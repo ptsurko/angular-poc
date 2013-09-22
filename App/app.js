@@ -1,1 +1,0 @@
-﻿angular.module('TestApp', ['ui.directives.modal']);
